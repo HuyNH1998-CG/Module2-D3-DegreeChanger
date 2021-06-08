@@ -17,17 +17,21 @@ public class Main {
                 case 1 -> {
                     System.out.println("Input Fahrenheit");
                     double fahrenheit = input.nextDouble();
-                    double celsius = (5.0 / 9) * (fahrenheit - 32);
-                    System.out.println(celsius + "C");
+                    System.out.println(fahrenheitToCelsius(fahrenheit) + "F");
                 }
                 case 2 -> {
                     System.out.println("Input celsius");
                     double celsius = input.nextDouble();
-                    double fahrenheit = (9 / 5.0) * celsius + 32;
-                    System.out.println(fahrenheit + "F");
+                    System.out.println(celsiusToFahrenheit(celsius) + "C");
                 }
                 case 0 -> System.exit(0);
             }
         }
+    }
+    public static double celsiusToFahrenheit (double celsius){
+        return (9 / 5.0) * celsius + 32;
+    }
+    public static double fahrenheitToCelsius (double fahrenheit){
+        return (5.0 / 9) * (fahrenheit - 32);
     }
 }
